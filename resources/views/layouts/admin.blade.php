@@ -52,7 +52,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white"
                                     href="{{ route('admin.project.create') }}">
-                                    <i class="fa-solid  fa-plus fa-lg fa-fw"></i> Aggiungi prodotto
+                                    <i class="fa-solid  fa-plus fa-lg fa-fw"></i> Add project
                                 </a>
                             </li>
 

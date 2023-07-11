@@ -26,11 +26,20 @@
             @error("title")
                 <div class="invalid-feedback">{{$message}}</div>
             @enderror
+
             <label for="content">Contenuto</label>
             <textarea name="content" id="content" cols="30" rows="10" class="form-control mb-4 @error('content') is-invalid @enderror">{{ old("content")?? $project->content  }}</textarea>
             @error("content")
                 <div class="invalid-feedback">{{$message}}</div>
             @enderror
+
+            <label for="type_id">Type</label>
+            <select class="form-control md-4" name="type_id" id="type_id">
+                <option value="" selected disabled>Selezione il type</option>
+                @foreach($types as $type)
+                    <option value="{{$type->id}}">{{$type->name}}</option>
+                @endforeach
+            </select>
 
             <label for="image">URL Immagine</label>
             <input type="text" name="image" id="image" value="{{ old("image")?? $project->image }}" class="form-control mb-4 @error('image') is-invalid @enderror">

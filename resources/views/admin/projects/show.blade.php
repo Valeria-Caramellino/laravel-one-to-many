@@ -18,7 +18,9 @@
             <div class="col-6 p-5 d-flex flex-column justify-content-center">
                 <h2>{{ $project->title }}</h2>
                 <hr>
-                <p><span class="fw-bold">Descrizione: </span>: {{ $project->content }}</p>
+                <p><span class="fw-bold">Descrizione: </span> {{ $project->content }}</p>
+                <hr>
+                <h5>Type: {{$project->type ? $project->type->name : 'Senza categoria'}}</h5>
             </div>
         </div>
     </div>

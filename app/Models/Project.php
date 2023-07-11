@@ -12,6 +12,11 @@ class Project extends Model
     protected $fillable= [
         "title",
         "content",
-        "image"
+        "image",
+        "type_id"
     ];
+    public function type(){
+        //un type appartiene a un progetto
+        return $this->belongsTo(Type::class);
+    }
 }
